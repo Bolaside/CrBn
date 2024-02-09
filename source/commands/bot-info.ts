@@ -12,10 +12,13 @@ export class BotInfoCommand extends Command {
     }
 
     public async messageRun(message: Message) {
+        const client = this.container.client
         const reply = await message.reply("🏓 Loading...")
         const content = [
-            `🏓 WebSocket Ping: ${this.container.client.ws.ping}ms`,
-            `🏓 API Ping: ${reply.createdTimestamp - message.createdTimestamp}ms`,
+            `🏓 WebSocket Ping: ${client.ws.ping}ms`,
+            `🏓 API Ping: ${reply.createdTimestamp - message.createdTimestamp}ms\n`,
+            `🤖 Bot ID: ${client.user!.id}`,
+            `🤖 Bot Creator ID: ${client.application?.owner?.id ?? "unknown"}`
         ].join("\n")
 
         return reply.edit({ content })
