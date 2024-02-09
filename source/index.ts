@@ -9,6 +9,7 @@ const client = new SapphireClient({
     defaultPrefix: "c!",
     caseInsensitivePrefixes: true,
     caseInsensitiveCommands: true,
+    loadMessageCommandListeners: true,
     allowedMentions: {
         repliedUser: false
     }
