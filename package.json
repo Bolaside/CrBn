@@ -1,14 +1,15 @@
 {
   "name": "crbn",
-  "version": "1.0.0",
-  "description": "A Discord bot made on mobile, for some reason.",
-  "main": "source/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "module": "source/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
   },
-  "author": "Bolaside",
-  "license": "MPL-2.0",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
   "dependencies": {
+    "@sapphire/framework": "^5.0.7",
     "discord.js": "^14.14.1",
     "dotenv": "^16.4.1"
   }
