@@ -7,7 +7,7 @@ export class BotInfoCommand extends Command {
             ...options,
             name: "bot-info",
             aliases: ["bi"],
-            description: "Outputs various information about the bot"
+            description: "Outputs various information about the bot",
         })
     }
 

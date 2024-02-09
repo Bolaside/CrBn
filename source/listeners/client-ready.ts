@@ -11,6 +11,8 @@ export class ClientReadyListener extends Listener {
     }
 
     public run(client: Client) {
-        this.container.logger.info(`Logged in as ${client.user!.tag} (${client.user!.id})`)
+        this.container.logger.info(
+            `Logged in as ${client.user!.tag} (${client.user!.id})`
+        )
     }
 }

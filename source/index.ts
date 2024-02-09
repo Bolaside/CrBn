@@ -11,8 +11,8 @@ const client = new SapphireClient({
     caseInsensitiveCommands: true,
     loadMessageCommandListeners: true,
     allowedMentions: {
-        repliedUser: false
-    }
+        repliedUser: false,
+    },
 })
 
 client.login(process.env.TOKEN)
